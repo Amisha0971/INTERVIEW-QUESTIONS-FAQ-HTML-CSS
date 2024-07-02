@@ -153,3 +153,100 @@
         <div class="question">2. What is the difference between an abstract class and an interface in Java?</div>
         <div class="answer">
             <p>An abstract class can have both abstract methods (without implementation) and concrete methods (with implementation), while an interface can only have abstract methods (prior to
+                <div class="question">3. What are your strengths and weaknesses?</div>
+                <div class="answer">
+                    <p>This question gauges your self-awareness and honesty. Highlight strengths relevant to the job and mention weaknesses you're working to improve.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">4. Describe a challenging situation you faced and how you handled it.</div>
+                <div class="answer">
+                    <p>This question assesses your problem-solving skills and ability to handle stress. Provide a specific example and focus on your actions and the positive outcome.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">5. Where do you see yourself in 5 years?</div>
+                <div class="answer">
+                    <p>This question evaluates your career goals and ambition. Show that you have thought about your future and how the role aligns with your long-term plans.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">6. Why should we hire you?</div>
+                <div class="answer">
+                    <p>This question allows you to summarize your qualifications, experience, and enthusiasm for the role, highlighting what makes you a unique and valuable candidate.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div the="question">7. How do you handle feedback and criticism?</div>
+                <div class="answer">
+                    <p>This question assesses your ability to accept feedback constructively and use it for personal and professional growth. Provide an example of how you've positively responded to feedback in the past.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">8. Describe a time when you worked in a team.</div>
+                <div class="answer">
+                    <p>This question evaluates your teamwork and collaboration skills. Share a specific example highlighting your role, contributions, and the outcome of the teamwork.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">9. What motivates you?</div>
+                <div class="answer">
+                    <p>This question helps understand your passion and drive. Discuss what aspects of your work inspire and motivate you to perform at your best.</p>
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">10. Do you have any questions for us?</div>
+                <div class="answer">
+                    <p>This question is an opportunity for you to demonstrate your interest in the role and the company. Ask thoughtful questions about the team, company culture, or career development opportunities.</p>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // JavaScript to toggle answer visibility
+            const questions = document.querySelectorAll('.question');
+            questions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    question.classList.toggle('open');
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        
+            function search() {
+                var input, filter, faqItems, question, i, txtValue;
+                input = document.getElementById("searchInput");
+                filter = input.value.toUpperCase();
+                faqItems = document.getElementsByClassName("faq-item");
+                for (i = 0; i < faqItems.length; i++) {
+                    question = faqItems[i].getElementsByClassName("question")[0];
+                    txtValue = question.textContent || question.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        faqItems[i].style.display = "";
+                        highlightMatches(question, filter);
+                    } else {
+                        faqItems[i].style.display = "none";
+                    }
+                }
+            }
+        
+            function highlightMatches(question, filter) {
+                var innerHTML = question.innerHTML;
+                var index = innerHTML.toUpperCase().indexOf(filter);
+                if (index >= 0) {
+                    innerHTML = innerHTML.substring(0, index) + "<span class='highlight'>" + innerHTML.substring(index, index + filter.length) + "</span>" + innerHTML.substring(index + filter.length);
+                    question.innerHTML = innerHTML;
+                }
+            }
+        </script>
+        
+        </body>
+        </html>
+        
