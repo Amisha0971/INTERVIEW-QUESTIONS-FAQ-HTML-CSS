@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accenture Fresher Interview FAQ</title>
+    <title></title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -82,7 +82,7 @@
             display: none;
             padding: 10px;
             border-radius: 5px;
-            background-color: white;
+            background-color:white;
         }
 
         .question:hover {
@@ -103,12 +103,13 @@
 
 <div class="container">
     <h1><u>Accenture Fresher Interview FAQ</u></h1>
-    <center><h2><u>Java Programming</u></h2></center>
+    <center><h2><u>Java programming</u></h2></center>
 
     <div class="search-container">
         <input type="text" id="searchInput" class="search-input" placeholder="Search FAQ...">
-        <button class="search-button" onclick="search()">Search</button>
+        <button onclick="search()">Search</button>
     </div>
+
 
     <h2>Interview Rounds</h2>
     <div class="faq-item">
@@ -138,6 +139,14 @@
         <div class="answer">
             <p>Q1. What is the next number in the sequence: 2, 6, 12, 20, 30, ...?</p>
             <p>Q2. If 3x + 2 = 14, what is the value of x?</p>
+            <p>Q3. A train travels at a speed of 60 km/hr and reaches its destination in 5 hours. How far is the destination?</p>
+            <p>Q4. If the ratio of ages of two persons is 4:5 and their total age is 45 years, what is the age of the younger person?</p>
+            <p>Q5. Simplify: (25/5) * (5/25)</p>
+            <p>Q6. If a car's fuel efficiency is 15 km/l, how many liters of fuel are needed for a 150 km trip?</p>
+            <p>Q7. Find the average of these numbers: 5, 10, 15, 20, 25.</p>
+            <p>Q8. What is the probability of getting a head in a single toss of a fair coin?</p>
+            <p>Q9. Calculate the compound interest on $1000 for 2 years at an annual interest rate of 5%.</p>
+            <p>Q10. If the perimeter of a rectangle is 50 cm and its length is 15 cm, what is its width?</p>
         </div>
     </div>
 
@@ -152,101 +161,175 @@
     <div class="faq-item">
         <div class="question">2. What is the difference between an abstract class and an interface in Java?</div>
         <div class="answer">
-            <p>An abstract class can have both abstract methods (without implementation) and concrete methods (with implementation), while an interface can only have abstract methods (prior to
-                <div class="question">3. What are your strengths and weaknesses?</div>
-                <div class="answer">
-                    <p>This question gauges your self-awareness and honesty. Highlight strengths relevant to the job and mention weaknesses you're working to improve.</p>
-                </div>
-            </div>
-        
-            <div class="faq-item">
-                <div class="question">4. Describe a challenging situation you faced and how you handled it.</div>
-                <div class="answer">
-                    <p>This question assesses your problem-solving skills and ability to handle stress. Provide a specific example and focus on your actions and the positive outcome.</p>
-                </div>
-            </div>
-        
-            <div class="faq-item">
-                <div class="question">5. Where do you see yourself in 5 years?</div>
-                <div class="answer">
-                    <p>This question evaluates your career goals and ambition. Show that you have thought about your future and how the role aligns with your long-term plans.</p>
-                </div>
-            </div>
-        
-            <div class="faq-item">
-                <div class="question">6. Why should we hire you?</div>
-                <div class="answer">
-                    <p>This question allows you to summarize your qualifications, experience, and enthusiasm for the role, highlighting what makes you a unique and valuable candidate.</p>
-                </div>
-            </div>
-        
-            <div class="faq-item">
-                <div the="question">7. How do you handle feedback and criticism?</div>
-                <div class="answer">
-                    <p>This question assesses your ability to accept feedback constructively and use it for personal and professional growth. Provide an example of how you've positively responded to feedback in the past.</p>
-                </div>
-            </div>
-        
-            <div class="faq-item">
-                <div class="question">8. Describe a time when you worked in a team.</div>
-                <div class="answer">
-                    <p>This question evaluates your teamwork and collaboration skills. Share a specific example highlighting your role, contributions, and the outcome of the teamwork.</p>
-                </div>
-            </div>
-        
-            <div class="faq-item">
-                <div class="question">9. What motivates you?</div>
-                <div class="answer">
-                    <p>This question helps understand your passion and drive. Discuss what aspects of your work inspire and motivate you to perform at your best.</p>
-                </div>
-            </div>
-        
-            <div class="faq-item">
-                <div class="question">10. Do you have any questions for us?</div>
-                <div class="answer">
-                    <p>This question is an opportunity for you to demonstrate your interest in the role and the company. Ask thoughtful questions about the team, company culture, or career development opportunities.</p>
-                </div>
-            </div>
+            <p>An abstract class can have both abstract methods (without implementation) and concrete methods (with implementation), while an interface can only have abstract methods (prior to Java 8). Starting from Java 8, interfaces can have default and static methods.</p>
         </div>
-        
-        <script>
-            // JavaScript to toggle answer visibility
-            const questions = document.querySelectorAll('.question');
-            questions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling;
-                    question.classList.toggle('open');
-                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-                });
-            });
-        
-            function search() {
-                var input, filter, faqItems, question, i, txtValue;
-                input = document.getElementById("searchInput");
-                filter = input.value.toUpperCase();
-                faqItems = document.getElementsByClassName("faq-item");
-                for (i = 0; i < faqItems.length; i++) {
-                    question = faqItems[i].getElementsByClassName("question")[0];
-                    txtValue = question.textContent || question.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        faqItems[i].style.display = "";
-                        highlightMatches(question, filter);
-                    } else {
-                        faqItems[i].style.display = "none";
-                    }
-                }
+    </div>
+
+    <div class="faq-item">
+        <div class="question">3. What are Java exceptions and how are they handled?</div>
+        <div class="answer">
+            <p>Exceptions are events that disrupt the normal flow of the program. They are handled using try, catch, and finally blocks. Specific exceptions can be caught and handled in the catch block.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">4. What is the difference between == and .equals() in Java?</div>
+        <div class="answer">
+            <p>== checks for reference equality, i.e., whether two references point to the same object. .equals() checks for value equality, i.e., whether two objects are logically equal.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">5. What is a constructor in Java?</div>
+        <div class="answer">
+            <p>A constructor is a special method used to initialize objects. It is called when an object of a class is created. Constructors have the same name as the class and do not have a return type.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">6. Explain the concept of inheritance in Java.</div>
+        <div class="answer">
+            <p>Inheritance is a mechanism where one class acquires the properties and behaviors (methods) of another class. It is used to achieve runtime polymorphism and code reuse.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">7. What is the use of the 'final' keyword in Java?</div>
+        <div class="answer">
+            <p>The 'final' keyword can be used with variables, methods, and classes. A final variable's value cannot be changed, a final method cannot be overridden, and a final class cannot be subclassed.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">8. What are threads in Java?</div>
+        <div class="answer">
+            <p>Threads are lightweight processes that allow concurrent execution of two or more parts of a program for maximum utilization of CPU. Threads can be created by implementing the Runnable interface or extending the Thread class.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">9. What is the difference between ArrayList and LinkedList in Java?</div>
+        <div class="answer">
+            <p>ArrayList uses a dynamic array to store elements and provides fast random access, while LinkedList uses a doubly linked list to store elements and provides faster insertion and deletion.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">10. Explain the concept of polymorphism in Java.</div>
+        <div class="answer">
+            <p>Polymorphism allows methods to do different things based on the object it is acting upon. It is achieved through method overriding (runtime polymorphism) and method overloading (compile-time polymorphism).</p>
+        </div>
+    </div>
+
+    <h3>HR Interview</h3>
+    <div class="faq-item">
+        <div class="question">1. Tell me about yourself.</div>
+        <div class="answer">
+            <p>This question allows you to introduce yourself, focusing on your education, experience, and skills relevant to the job.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">2. Why do you want to work for our company?</div>
+        <div class="answer">
+            <p>Research the company and mention specific reasons such as company values, culture, or projects that align with your career goals.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">3. What are your strengths and weaknesses?</div>
+        <div class="answer">
+            <p>This question gauges your self-awareness and honesty. Highlight strengths relevant to the job and mention weaknesses you're working to improve.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">4. Describe a challenging situation you faced and how you handled it.</div>
+        <div class="answer">
+            <p>This question assesses your problem-solving skills and ability to handle stress. Provide a specific example and focus on your actions and the positive outcome.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">5. Where do you see yourself in 5 years?</div>
+        <div class="answer">
+            <p>This question evaluates your career goals and ambition. Show that you have thought about your future and how the role aligns with your long-term plans.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">6. Why should we hire you?</div>
+        <div class="answer">
+            <p>This question allows you to summarize your qualifications, experience, and enthusiasm for the role, highlighting what makes you a unique and valuable candidate.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div the="question">7. How do you handle feedback and criticism?</div>
+        <div class="answer">
+            <p>This question assesses your ability to accept feedback constructively and use it for personal and professional growth. Provide an example of how you've positively responded to feedback in the past.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">8. Describe a time when you worked in a team.</div>
+        <div class="answer">
+            <p>This question evaluates your teamwork and collaboration skills. Share a specific example highlighting your role, contributions, and the outcome of the teamwork.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">9. What motivates you?</div>
+        <div class="answer">
+            <p>This question helps understand your passion and drive. Discuss what aspects of your work inspire and motivate you to perform at your best.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">10. Do you have any questions for us?</div>
+        <div class="answer">
+            <p>This question is an opportunity for you to demonstrate your interest in the role and the company. Ask thoughtful questions about the team, company culture, or career development opportunities.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to toggle answer visibility
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            question.classList.toggle('open');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    function search() {
+        var input, filter, faqItems, question, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        faqItems = document.getElementsByClassName("faq-item");
+        for (i = 0; i < faqItems.length; i++) {
+            question = faqItems[i].getElementsByClassName("question")[0];
+            txtValue = question.textContent || question.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                faqItems[i].style.display = "";
+                highlightMatches(question, filter);
+            } else {
+                faqItems[i].style.display = "none";
             }
-        
-            function highlightMatches(question, filter) {
-                var innerHTML = question.innerHTML;
-                var index = innerHTML.toUpperCase().indexOf(filter);
-                if (index >= 0) {
-                    innerHTML = innerHTML.substring(0, index) + "<span class='highlight'>" + innerHTML.substring(index, index + filter.length) + "</span>" + innerHTML.substring(index + filter.length);
-                    question.innerHTML = innerHTML;
-                }
-            }
-        </script>
-        
-        </body>
-        </html>
-        
+        }
+    }
+
+    function highlightMatches(question, filter) {
+        var innerHTML = question.innerHTML;
+        var index = innerHTML.toUpperCase().indexOf(filter);
+        if (index >= 0) {
+            innerHTML = innerHTML.substring(0, index) + "<span class='highlight'>" + innerHTML.substring(index, index + filter.length) + "</span>" + innerHTML.substring(index + filter.length);
+            question.innerHTML = innerHTML;
+        }
+    }
+</script>
+
+</body>
+</html>
